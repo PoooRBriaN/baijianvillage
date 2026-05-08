@@ -1,7 +1,32 @@
+<template>
+  <div class="app-layout">
+
+    <AppHeader />
+
+    <main class="main-content">
+      <router-view />
+    </main>
+
+    <AppFooter />
+
+  </div>
+</template>
+
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import AppHeader from './components/AppHeader.vue'
+import AppFooter from './components/AppFooter.vue'
 </script>
 
-<template>
-  <HelloWorld />
-</template>
+<style>
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+
+  padding-top: 72px;
+}
+</style>
